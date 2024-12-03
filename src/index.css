@@ -4,6 +4,10 @@
   --accent-color: #007dc5;
 }
 
+html {
+  font-size: 16px;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -54,6 +58,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-section {
   background-color: var(--primary-color);
-  height: 340px;
+  height: auto;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  align-items: center;
+  margin: 0 12px;
+}
+
+.hero-center {
+  position: relative;
+  text-align: center;
+}
+
+.headshot {
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  position: absolute;
+  top: -45%;
+  left: 25%;
+  z-index: 1;
+  opacity: 0.1;
+  transform: scale(.6);
 }
 
