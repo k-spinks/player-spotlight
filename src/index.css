@@ -4,14 +4,13 @@
   --primary-color: #00471b;
   --secondary-color: #f0ebd2;
   --accent-color: #007dc5;
-}
-
-html {
-  font-size: 16px;
+  --base-font-size: 16px;
 }
 
 body {
   font-family: 'Bebas Neue', sans-serif;
+  font-size: var(--base-font-size);
+  line-height: 1.5; /* Maintain good readability */
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -70,30 +69,37 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ! Hero Section */
 
+/* Hero Section */
 .hero-section {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  height: auto;
   overflow: hidden;
+  padding: 0 16px; /* Default mobile margin */
 }
 
+/* Hero Container */
 .hero-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr; /* Default for mobile */
   gap: 20px;
   align-items: center;
-  margin: 0 12px;
   letter-spacing: 1px;
 }
 
+/* Hero Center */
 .hero-center {
   position: relative;
   text-align: center;
+  align-self: end;
 }
 
+/* Images */
 .headshot {
   position: relative;
   z-index: 2;
+  width: 100%; /* Responsive width */
+  max-width: 200px; /* Max size for scaling */
+  height: auto;
 }
 
 .logo {
@@ -102,20 +108,21 @@ h1, h2, h3, h4, h5, h6 {
   left: 25%;
   z-index: 1;
   opacity: 0.1;
-  transform: scale(.6);
+  transform: scale(0.6);
 }
 
-.hero-left h1, .hero-left h3 {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  width: 100%;
-}
-
+/* Hero Left and Right */
 .hero-left, .hero-right {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 5px;
 }
+
+.hero-left h1, .hero-left h3 {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 /* ! Stats section */
 .stats-section {
@@ -259,6 +266,27 @@ footer {
 
 /* ? Tablet View */
 @media (min-width: 600px) {
+  :root {
+    --base-font-size: 24px;
+  }
+
+  .hero-section {
+    padding: 0 32px; /* Tablet margin */
+  }
+
+  .hero-container {
+    grid-template-columns: 3fr 3fr 2fr; /* Adjusted layout */
+    gap: 24px;
+  }
+
+  .headshot {
+    max-width: 250px; /* Larger image on tablet */
+  }
+
+  .logo {
+    top: -50%;
+    transform: scale(0.7); /* Adjusted scaling */
+  }
   .awards-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
@@ -273,5 +301,29 @@ footer {
 
 /* ? Desktop View */
 @media (min-width: 1024px) {
+  :root {
+    --base-font-size: 30px;
+  }
+  .hero-section {
+    padding: 0 120px; /* Desktop margin */
+  }
 
+  .hero-container {
+    grid-template-columns: 4fr 4fr 4fr; /* Adjusted layout */
+    gap: 32px;
+  }
+
+  .hero-left, .hero-right {
+    justify-content: start; /* Center words on larger screens */
+    align-items: center; /* Center horizontally */
+  }
+
+  .headshot {
+    max-width: 300px; /* Larger image on desktop */
+  }
+
+  .logo {
+    top: -55%;
+    transform: scale(0.8); /* Adjusted scaling */
+  }
 }

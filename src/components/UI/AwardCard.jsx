@@ -10,7 +10,7 @@ export default function AwardCard(props) {
         <p>{count}x</p>
       </div>
       <div className='back'>
-        <h3>Years Won:</h3>
+        <h3>Year(s) Won:</h3>
         <p>{years.join(', ')}</p>
       </div>
     </div>

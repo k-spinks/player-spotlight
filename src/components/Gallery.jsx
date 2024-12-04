@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Gallery () {
   return (
-    <section>
+    <section id='gallery'>
      
     </section>
   )

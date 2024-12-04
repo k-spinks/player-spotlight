@@ -14,7 +14,7 @@ export default function Awards() {
   } = awards;
 
   return (
-    <section className="awards-section">
+    <section id='awards' className="awards-section">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

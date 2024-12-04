@@ -7,7 +7,7 @@ export default function Stats() {
   const [flip, setFlip] = useState(true);
 
   return (
-    <section className='stats-section'>
+    <section id='stats' className='stats-section'>
       <div className='stats-container'>
         <h1>Stats</h1>
         <div>

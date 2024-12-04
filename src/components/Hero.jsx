@@ -20,7 +20,7 @@ export default function Hero({ playerData }) {
   const player = { fName, lName, height, weight, jersey, position, school };
 
   return (
-    <section className="hero-section">
+    <section id='home' className="hero-section">
       <div className="hero-container page-container">
         <div className="hero-left">
           <div>
