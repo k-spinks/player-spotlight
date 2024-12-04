@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { GRAPHQL_API, GET_PLAYER_DATA } from './data/graphqlData.js'
+import { GRAPHQL_API, GET_PLAYER_DATA } from '../data/graphqlData.js'
 import axios from 'axios';
-import Hero from './components/Hero';
-import Stats from './components/Stats.jsx';
-import Awards from './components/Awards.jsx';
-import Gallery from './components/Gallery.jsx';
+import Hero from '../components/Hero';
+import Stats from '../components/Stats.jsx';
+import Awards from '../components/Awards.jsx';
+import Gallery from '../components/Gallery.jsx';
 
 
 export default function Main() {
-  
+
   //Set default value for playerData
   const [playerData, setPlayerData] = useState({
     fName: '',
@@ -51,6 +51,7 @@ export default function Main() {
             school_name: player.school_name
           });
         } catch (error) {
+
           // Handle errors during the Axios request
           if (error.response) {
             console.error('Response Error:', error.response.data);

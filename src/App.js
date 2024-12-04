@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './App.css';
 import Main from './components/Main';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <Main />
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 }
