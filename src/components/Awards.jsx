@@ -1,6 +1,5 @@
 import React from 'react';
 import AwardCard from './UI/AwardCard';
-import { motion } from 'framer-motion';
 import { awards } from '../data/data';
 
 export default function Awards() {
@@ -15,14 +14,7 @@ export default function Awards() {
 
   return (
     <section id='awards' className="awards-section">
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="section-title"
-      >
-        Player Awards
-      </motion.h2>
+      <h2 className="section-heading">Player Awards</h2>
       <div className="awards-grid">
         <AwardCard award={allNBA} />
         <AwardCard award={allRookieTeam} />

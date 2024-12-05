@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import Stats from '../components/Stats.jsx';
 import Awards from '../components/Awards.jsx';
 import Gallery from '../components/Gallery.jsx';
+import Bio from './Bio.jsx';
 
 
 export default function Main() {
@@ -67,8 +68,11 @@ export default function Main() {
     }, []);
 
   return (
+
+    // Render the main component
     <main>
       <Hero playerData={playerData}/>
+      <Bio />
       <Stats playerData={playerData}/>
       <Awards />
       <Gallery />

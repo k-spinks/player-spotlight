@@ -73,3 +73,37 @@ export const awards = {
     years: [2014, 2015, 2018, 2019, 2020, 2021, 2023, 2024]
   }
 };
+
+export const socialMedia = {
+  instagram: {
+    url: "https://www.instagram.com/damianlillard/",
+    icon: "fa-brands fa-instagram",
+  },
+  twitter: {
+    url: "https://twitter.com/Dame_Lillard",
+    icon: "fa-brands fa-twitter",
+  },
+  facebook: {
+    url: "https://www.facebook.com/DamianLillard",
+    icon: "fa-brands fa-facebook",
+  },
+};
+
+export const images = [
+  {
+    src: '/assets/damegallery1.jpg',
+    description: 'Lillard Free Throw',
+  },
+  {
+    src: '/assets/damegallery2.jpg',
+    description: 'Dame Time',
+  },
+  {
+    src: '/assets/damegallery3.jpg',
+    description: 'Lillard Jump Shot',
+  },
+  {
+    src: '/assets/damegallery4.jpg',
+    description: 'Lillard Layup',
+  },
+];

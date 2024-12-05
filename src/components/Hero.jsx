@@ -7,6 +7,7 @@ import {
 } from '../data/animation.js';
 
 export default function Hero({ playerData }) {
+  // pull payer data from props
   const {
     first_name: fName,
     last_name: lName,
@@ -31,6 +32,8 @@ export default function Hero({ playerData }) {
             {player.jersey} | {player.position === 'G' ? 'Guard' : 'Position'}
           </h3>
         </div>
+
+        {/* Animation for hero headshot and logo */}
         <motion.div
           className="hero-center"
           initial={heroCenterAnimation.initial}
