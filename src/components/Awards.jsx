@@ -3,6 +3,7 @@ import AwardCard from './UI/AwardCard';
 import { awards } from '../data/data';
 
 export default function Awards() {
+  // Destructure the awards object for easier and cleaner access to individual awards
   const {
     allNBA,
     allRookieTeam,
@@ -15,7 +16,10 @@ export default function Awards() {
   return (
     <section id='awards' className="awards-section">
       <h2 className="section-heading">Player Awards</h2>
+
+      {/* Grid container to layout AwardCards in a structured format */}
       <div className="awards-grid">
+        {/* Rendering an AwardCard for each award, passing the respective award data as props */}
         <AwardCard award={allNBA} />
         <AwardCard award={allRookieTeam} />
         <AwardCard award={nbaPlayerOfTheMonth} />

@@ -8,7 +8,7 @@ export default function Bio() {
         <div className="bio-text">
           <h2 className='section-heading'>Biography</h2>
           <p>
-            Damian Lillard is a professional basketball player for the Milwaukee Bucks born in Oakland, CA. He played college basketball for the Weber State Wildcats and earned All-American honors in 2012. The Portland Trailblazers selected Lillard with the sixth overall pick in the 2012 NBA draft. Lillard has received five NBA All-Star selections and is one of the best point guards in the league.
+          Damian Lillard, a professional basketball player for the Milwaukee Bucks, was born in Oakland, California on July 15 1990. He played collegiate basketball at Weber State University, where he earned All-American honors in 2012. Selected as the sixth overall pick in the 2012 NBA Draft by the Portland Trail Blazers, Lillard has since established himself as one of the premier point guards in the league, earning numerous accolades including five NBA All-Star selections.
           </p>
         </div>
         <div className="bio-social-links">

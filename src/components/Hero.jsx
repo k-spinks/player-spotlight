@@ -7,7 +7,7 @@ import {
 } from '../data/animation.js';
 
 export default function Hero({ playerData }) {
-  // pull payer data from props
+  // Extracting player data from props for better readability and usage
   const {
     first_name: fName,
     last_name: lName,
@@ -18,6 +18,7 @@ export default function Hero({ playerData }) {
     school_name: school,
   } = playerData;
 
+  // Creating a single object to organize player details for reuse in JSX
   const player = { fName, lName, height, weight, jersey, position, school };
 
   return (
@@ -32,20 +33,21 @@ export default function Hero({ playerData }) {
             {player.jersey} | {player.position === 'G' ? 'Guard' : 'Position'}
           </h3>
         </div>
-
-        {/* Animation for hero headshot and logo */}
         <motion.div
           className="hero-center"
           initial={heroCenterAnimation.initial}
           animate={heroCenterAnimation.animate}
           transition={heroCenterAnimation.transition}
         >
+          {/* Animated headshot of the player */}
           <motion.img
             className="headshot"
             src="/assets/dame.webp"
             alt="Damian Lillard Headshot"
             {...headshotAnimation}
           />
+
+          {/* Animated team logo */}
           <motion.img
             className="logo"
             src="/assets/bucks.webp"
@@ -53,6 +55,8 @@ export default function Hero({ playerData }) {
             {...logoAnimation}
           />
         </motion.div>
+
+        {/* Right side of the hero section displaying additional player details */}
         <div className="hero-right">
           <h5>Height: {player.height}</h5>
           <h5>Weight: {player.weight}</h5>

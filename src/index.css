@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
 .stats-wrapper {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: 700px;
 }
 
 .stats-img {
@@ -222,6 +222,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .stats-sheet {
   position: absolute;
+  text-align: center;
   bottom: 0;
   left: 50%;
   height: 100px;
@@ -251,8 +252,27 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
 }
 
+.stats-sheet h3 {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.arrow-toggle {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
 .arrow-toggle:hover {
   cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+.stat p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
 }
 
 
@@ -313,6 +333,20 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--accent-color);
   color: var(--secondary-color);
   transform: rotateY(180deg);
+}
+
+.icon {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.award-card:hover .icon {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .award-card:hover {
@@ -432,7 +466,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .stats-wrapper {
-    width: 50%;
+    width: 75%;
+  }
+
+  .arrow-toggle {
+    font-size: 1.2rem;
+  }
+
+  .stats-sheet h3 {
+    font-size: 2rem;
   }
 
   .stats-img,
@@ -498,7 +540,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .stats-wrapper {
-    width: 50%;
+    width: 40%;
   }
 
   .stats-img,
@@ -507,15 +549,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .stats-sheet {
-    height: 200px;
+    height: 150px;
   }
 
   .stat {
     font-size: 1.75rem;
   }
 
-.award-card h3,
-.award-card p {
-  font-size: 1.5rem;
-}
+  .award-card h3,
+  .award-card p {
+    font-size: 1.5rem;
+  }
 }

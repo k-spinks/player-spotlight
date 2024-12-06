@@ -7,7 +7,6 @@ import Awards from '../components/Awards.jsx';
 import Gallery from '../components/Gallery.jsx';
 import Bio from './Bio.jsx';
 
-
 export default function Main() {
 
   //Set default value for playerData
