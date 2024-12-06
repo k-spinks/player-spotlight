@@ -12,7 +12,7 @@ export default function Bio() {
           </p>
         </div>
         <div className="bio-social-links">
-          <h3>Connect with Damian</h3>
+          <h3>Connect with Dame</h3>
           <ul>
 
             {/* Map over the social media data and create a list item for each platform */}
